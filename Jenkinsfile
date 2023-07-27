@@ -24,7 +24,7 @@ pipeline {
   stage('Docker Build and Tag') {
            steps {
               
-                sh 'docker build -t samplewebapp:latest .' 
+                sh 'docker build -t samplewebapp:latest /var/lib/jenkins/workspace/CI-Pipeline-1' 
                 sh 'docker tag samplewebapp kuberupeshkumarg/samplewebapp:latest'
           }
         }
